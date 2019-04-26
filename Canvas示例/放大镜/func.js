@@ -21,13 +21,13 @@ window.onload = function () {
         img.style.left = left * (-3) + 'px';
     }
     //监听box的onmouseenter事件
-    box.onmouseenter = function (e) {
+    // box.onmouseenter = function (e) {
         //当鼠标进入box范围的时候，显示放大效果
-        big.style.display = 'block';
-    }
+        // big.style.display = 'block';
+    // }
     //监听box的onmouseleave 事件
-    box.onmouseleave = function (e) {
+    // box.onmouseleave = function (e) {
         //当鼠标移出box范围的时候，隐藏放大效果
-        big.style.display = 'none';
-    }
+        // big.style.display = 'none';
+    // }
 }
