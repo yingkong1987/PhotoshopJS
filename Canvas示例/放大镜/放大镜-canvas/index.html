@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-size: 100% 100%;
+        }
+
+        #box #small {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: red;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="small"></div>
+        <img id="smallImage" src="http://t1.hxzdhn.com/uploads/tu/zyf/tt/20160520/egvtj4ei0px.jpg" width="300"
+            height="300">
+    </div>
+    <div id="big">
+        <canvas id="bigCanvas" width="300", height="300"></canvas>
+    </div>
+</body>
+<script src="func.js"></script>
+
+</html>
