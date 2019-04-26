@@ -14,20 +14,28 @@ window.onload = function () {
     var box = document.querySelector('#box');
     var small = document.querySelector('#small');
     var smallImage = document.getElementById('smallImage');
-    smallImage.crossOrigin = "Anonymous";
+    // var url = 'http://t1.hxzdhn.com/uploads/tu/zyf/tt/20160520/egvtj4ei0px.jpg';
+    // smallImage.src = url + '?' + new Date().getTime();
+    // console.log(smallImage.src);
+    // smallImage.setAttribute('crossOrigin', '');
+    // smallImage.crossOrigin = "Anonymous";
     var button = document.getElementById('button');
     var bigCanvas = document.getElementById('bigCanvas');
     var bigCtx = bigCanvas.getContext('2d');
-    bigCanvas.crossOrigin = "Anonymous";
-    bigCtx.crossOrigin = "Anonymous";
+    // bigCanvas.crossOrigin = "Anonymous";
+    // bigCtx.crossOrigin = "Anonymous";
 
     button.addEventListener('click', function(){
+       drawGaussImage();
+    }, false);
+
+    function drawGaussImage() {
         bigCtx.clearRect(0,0,300,300);
         bigCtx.drawImage(smallImage,0,0,smallImage.width,smallImage.height);
         var data = bigCtx.getImageData(0, 0, smallImage.width, smallImage.height);
         var emptyData = gaussBlur(data);
         bigCtx.putImageData(emptyData, 0, 0);
-    }, false);
+    }
 
     function gaussBlur(imgData) {
         var pixes = imgData.data;
